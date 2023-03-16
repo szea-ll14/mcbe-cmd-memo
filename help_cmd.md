@@ -1,6 +1,6 @@
 # /help で表示されるコマンド構文一覧
 
-## Rel 1.19.70 オペレーター チートオン
+## Rel 1.19.70, オペレーター, チートオン
 ```
 /? <page: int>
 /? [command: CommandName]
@@ -193,7 +193,7 @@
 /xp <amount: int> [player: target]
 /xp <amount: int>L [player: target]
 ```
-## Upcoming Creator Features (今後のクリエイター機能) オン
+### Upcoming Creator Features (今後のクリエイター機能) オン
 ```
 /volumearea add <identifier: string> <from: x y z> <to: x y z> [name: string]
 /volumearea list [all-dimensions: VolumeAreaAllDimensions]
@@ -201,7 +201,7 @@
 /volumearea remove <position: x y z>
 /volumearea remove_all
 ```
-## Education Edition オン
+### Education Edition オン
 ```
 /ability <player: target> <ability: Ability> <value: Boolean>
 /ability <player: target> [ability: Ability]
@@ -209,7 +209,7 @@
 /wb
 /worldbuilder
 ```
-## BDS内
+### BDS内
 ```
 /allowlist <action: AllowListAction> [name: string]
 /changesetting allow-cheats <value: Boolean>
