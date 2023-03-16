@@ -19,23 +19,12 @@
 |creeper||creeper, monster, mob|
 |dolphin||dolphin, mob|
 |donkey||donkey, mob|
-|dragon_fireball|||
 |drowned||drowned, zombie, undead, monster, mob|
-|egg|||
 |elder_guardian||guardian_elder, monster, mob|
-|elder_guardian_ghost|||
-|ender_crystal|||
 |ender_dragon||dragon, mob|
-|ender_pearl|||
 |enderman||enderman, monster, mob|
 |endermite||endermite, arthropod, monster, lightweight, mob|
-|evocation_fang|||
 |evocation_illager||evocation_illager, monster, illager, mob|
-|eye_of_ender_signal|||
-|falling_block|||
-|fireball|||
-|fireworks_rocket|||
-|fishing_hook|||
 |fox||fox, lightweight, mob|
 |frog||frog, mob|
 |ghast||ghast, monster, mob|
@@ -48,22 +37,15 @@
 |hopper_minecart||minecart, inanimate|
 |horse||horse, mob|
 |husk||husk, zombie, undead, monster, mob|
-|ice_bomb|||
 |iron_golem||irongolem, mob|
-|item|||
-|leash_knot|||
 |lightning_bolt||lightning|
-|lingering_potion|||
 |llama||llama, mob|
-|llama_spit|||
 |magma_cube||magmacube, monster, mob|
 |minecart||minecart, inanimate|
 |mooshroom||mushroomcow, mob|
-|moving_block|||
 |mule||mule, mob|
 |npc||npc, mob|
 |ocelot||ocelot, mob|
-|painting|||
 |panda|minecraft:panda_aggressive|panda , panda_aggressive, mob|
 |panda||panda|
 |parrot|minecraft:parrot_wild|parrot_wild, mob|
@@ -81,26 +63,19 @@
 |ravager||monster, ravager, mob|
 |salmon||salmon, fish|
 |sheep||sheep, mob|
-|shield|||
 |shulker||shulker, monster, mob|
-|shulker_bullet|||
 |silverfish||silverfish, monster, lightweight, mob, arthropod|
 |skeleton||skeleton, undead, monster, mob|
 |skeleton_horse||skeletonhorse, undead, mob|
 |slime||slime, monster, mob|
-|small_fireball|||
-|sniffer|||
 |snow_golem||snowgolem, mob|
-|snowball|||
 |spider||spider, monster, mob, arthropod|
-|splash_potion|||
 |squid||squid, mob|
 |stray||stray, skeleton, monster, mob, undead|
 |strider|minecraft:strider_baby|strider, strider_baby, mob|
 |strider|minecraft:strider_adult|strider, strider_adult, mob|
 |strider||strider, mob|
 |tadpole||tadpole, mob|
-|thrown_trident|||
 |tnt||tnt, inanimate|
 |tnt_minecart||minecart, inanimate|
 |trader_llama||trader_llama, llama, mob|
@@ -145,10 +120,7 @@
 |witch||witch, monster, mob|
 |wither||wither, skeleton, monster, undead, mob|
 |wither_skeleton||wither, monster, undead, skeleton, mob|
-|wither_skull|||
-|wither_skull_dangerous|||
 |wolf||wolf, mob|
-|xp_bottle|||
 |xp_orb||inanimate|
 |zoglin|zoglin_baby|zoglin, zoglin_baby, undead, mob|
 |zoglin|zoglin_adult|zoglin, zoglin_adult, undead, mob|
