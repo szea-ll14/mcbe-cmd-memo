@@ -1,3 +1,5 @@
+1.19.70時点
+
 |rideエンティティID|rideコンポーネントグループ|riderエンティティファミリー|
 |:-|:-|:-|
 |boat|minecraft:can_ride|(すべて)|
