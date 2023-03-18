@@ -1,4 +1,4 @@
-# msbe-cmd-note
+# mcbe-cmd-note
 Minecraft Bedrock Edition バニラ環境でのコマンドに関するメモ等。  
 雑に書いて雑に置いているので見づらかったらごめんね。
 
