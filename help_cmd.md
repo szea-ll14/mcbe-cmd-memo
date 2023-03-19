@@ -62,7 +62,7 @@
 /gametest runthese
 /gametest runthis
 /give <player: target> <itemName: Item> [amount: int] [data: int] [components: json]
-/help <page:int>
+/help <page: int>
 /help [command: CommandName]
 /kick <name: target> <reason: massage>
 /kill [target: target]
@@ -95,8 +95,8 @@
 /playanimation <entity: target> <animation: string> [next_state: string] [blend_out_time: float] [stop_expression: string] [controller: string]
 /playsound <sound: string> [player: target] [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]
 /reload
-/replaceitem block <position:x y z> slot.container <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
-/replaceitem block <position:x y z> slot.container <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
+/replaceitem block <position: x y z> slot.container <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
+/replaceitem block <position: x y z> slot.container <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
 /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <itemName: Item> [amount: int] [data: int] [components: json]
 /replaceitem entity <target: target> <slotType: EntityEquipmentSlot> <slotId: int> <oldItemHandling: ReplaceMode> <itemName: Item> [amount: int] [data: int] [components: json]
 /ride <riders: target> start_riding <ride: target> [teleportRules: TeleportRules] [howToFill: FillType]
@@ -125,11 +125,11 @@
 /script profiler start
 /script profiler stop
 /script watchdog exportstats
-/setblock <position:x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
+/setblock <position: x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
 /setmaxplayers <maxPlayers: int>
 /setworldspawn [spawnPoint: x y z]
 /spawnpoint [player: target] [spawnPos: x y z]
-/spreadplayers <x:value> <z:value> <spreadDistance: float> <maxRange: float> <victim: target>
+/spreadplayers <x: value> <z: value> <spreadDistance: float> <maxRange: float> <victim: target>
 /stopsound <player: target> [sound: string]
 /structure delete <name: string>
 /structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includeEntities: Boolean] [includeBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string]
@@ -216,43 +216,77 @@
 /changesetting difficulty <value: Difficulty>
 /changesetting difficulty <value: int>
 /ops <action: PermissionsAction>
-/parmission <action: PermissionsAction>
+/permission <action: PermissionsAction>
 /save <mode: SaveMode>
 /stop
 /whitelist <action: AllowListAction> [name: string]
 ```
 ## Pre 1.19.80.21
 ```
+/clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> [blockStates: block states]
 /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> replace <replaceTileName: Block> [replaceBlockStates: block state]
 /fill <from: x y z> <to: x y z> <tileName: Block> [oldBlockHandling: FillMode]
 /fill <from: x y z> <to: x y z> <tileName: Block> replace [replaceTileName: Block] [replaceBlockStates: block state]
 /inputpermission query <targets: target> <permission: permission> [state: state]
 /inputpermission set <targets: target> <permission: permission> <state: state>
-/setblock <position:x y z> <tileName: Block> [replace|destroy|keep]
+/setblock <position: x y z> <tileName: Block> [replace|destroy|keep]
 /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtEntity: target> [spawnEvent: string] [nameTag: string]
 /summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtPosition: x y z> [spawnEvent: string] [nameTag: string]
 ```
 ## 隠しコマンド
 Fandom Wikiより
 いくつかはBDSで実行可能
-websocket とか Script API が関わる?
 情報求
 ```
-/agent ???
-/closewebsocket ???
+/agent attack <direction>
+/agent collect <string:item>
+/agent create
+/agent destroy <direction>
+/agent detect <direction>
+/agent detectredstone <direction>
+/agent drop <int:slotNum> <int:quantity> <direction>
+/agent dropall <direction>
+/agent getitemcount <int:slotNum>
+/agent getitemspace <int:slotNum>
+/agent getitemdetail <int:slotNum>
+/agent inspect <direction>
+/agent inspectdata <direction>
+/agent move <direction>
+/agent place <int:slotNum> <direction>
+/agent setitem <int:slotNum> <int:quantity> <int:amount> <int:data>
+/agent tp <coordinates>
+/agent transfer <int:srcSlotNum> <int:quantity> <int:dstSlotNum>
+/agent turn <turnDirection>
+/agent till <direction>
+/closewebsocket
 /dedicatedwsserver ???
-/enableencryption ???
+/enableencryption <Public Key> <Salt value>
 /getchunkdata <dimension: string> <chunkX: int> <chunkZ: int> <height: int>
-/getchunks ???
-/geteduserverinfo ???
+/getchunks <dimension: string>
+/geteduserverinfo
 /getlocalplayername ???
-/getspawnpoint ???
+/getspawnpoint <player: target>
 /gettopsolidblock ???
 /globalpause ???
 /listd ???
 /querytarget <target: target>
 /replace ???
 /takepicture <targetCamera: target> <targetPlayer: target>
-/takepicture <cameraSpawnLocation: ???> <targetPlayer: target>
+/takepicture <cameraSpawnLocation: x y z> <targetPlayer: target>
 /takepicture <targetPlayer: target>
 ```
+
+
+
+## おまけ: エイリアス
+「'<コマンド名>' を <実行者名> として実行できませんでした」の<コマンド名>はエイリアス元のコマンドが表示される。`/execute run`か、旧executeのdetectが失敗する(エラーではない)と出る。
+
+エイリアス元 ← エイリアス  
+help ← ?  
+daylock ← alwaysday  
+wsserver ← connect  
+teleport ← tp  
+tell ← msg , w  
+worldbuilder ← wb  
+allowlist ← whitelist  
+permission ← ops  
