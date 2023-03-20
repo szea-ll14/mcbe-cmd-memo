@@ -971,7 +971,7 @@
         ]
     },
     {
-        "id": "pistonArmCollision",
+        "id": "piston_arm_collision",
         "states": [
             {
                 "name": "facing_direction",
@@ -1139,7 +1139,7 @@
         ]
     },
     {
-        "id": "double_stone_slab",
+        "id": "double_stone_block_slab",
         "states": [
             {
                 "name": "stone_slab_type",
@@ -1855,11 +1855,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -2230,11 +2230,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -2911,7 +2911,7 @@
         ]
     },
     {
-        "id": "wooden_trapdoor",
+        "id": "trapdoor",
         "states": [
             {
                 "name": "direction",
@@ -3410,7 +3410,7 @@
                     }
                 ],
                 "default": 0,
-                "bit": 0
+                "bit": 15
             }
         ]
     },
@@ -6314,7 +6314,7 @@
         ]
     },
     {
-        "id": "double_stone_slab2",
+        "id": "double_stone_block_slab2",
         "states": [
             {
                 "name": "stone_slab_type_2",
@@ -6373,7 +6373,7 @@
         ]
     },
     {
-        "id": "stone_slab2",
+        "id": "stone_block_slab2",
         "states": [
             {
                 "name": "stone_slab_type_2",
@@ -6607,6 +6607,64 @@
     },
     {
         "id": "dark_oak_fence_gate",
+        "states": [
+            {
+                "name": "direction",
+                "value": [
+                    {
+                        "state": 0,
+                        "data": 0
+                    },
+                    {
+                        "state": 1,
+                        "data": 1
+                    },
+                    {
+                        "state": 2,
+                        "data": 2
+                    },
+                    {
+                        "state": 3,
+                        "data": 3
+                    }
+                ],
+                "default": 0,
+                "bit": 3
+            },
+            {
+                "name": "open_bit",
+                "value": [
+                    {
+                        "state": false,
+                        "data": 0
+                    },
+                    {
+                        "state": true,
+                        "data": 4
+                    }
+                ],
+                "default": false,
+                "bit": 4
+            },
+            {
+                "name": "in_wall_bit",
+                "value": [
+                    {
+                        "state": false,
+                        "data": 0
+                    },
+                    {
+                        "state": true,
+                        "data": 8
+                    }
+                ],
+                "default": false,
+                "bit": 8
+            }
+        ]
+    },
+    {
+        "id": "acacia_fence_gate",
         "states": [
             {
                 "name": "direction",
@@ -6902,11 +6960,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -6975,11 +7033,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -7048,11 +7106,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -7121,11 +7179,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -7194,11 +7252,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -8544,7 +8602,7 @@
         ]
     },
     {
-        "id": "concretepowder",
+        "id": "concrete_powder",
         "states": [
             {
                 "name": "color",
@@ -10828,7 +10886,7 @@
         ]
     },
     {
-        "id": "stone_slab3",
+        "id": "stone_block_slab3",
         "states": [
             {
                 "name": "stone_slab_type_3",
@@ -11051,7 +11109,7 @@
         ]
     },
     {
-        "id": "stone_slab4",
+        "id": "stone_block_slab4",
         "states": [
             {
                 "name": "stone_slab_type_4",
@@ -11098,7 +11156,7 @@
         ]
     },
     {
-        "id": "double_stone_slab3",
+        "id": "double_stone_block_slab3",
         "states": [
             {
                 "name": "stone_slab_type_3",
@@ -11157,7 +11215,7 @@
         ]
     },
     {
-        "id": "double_stone_slab4",
+        "id": "double_stone_block_slab4",
         "states": [
             {
                 "name": "stone_slab_type_4",
@@ -13204,7 +13262,7 @@
         ]
     },
     {
-        "id": "stickypistonarmcollision",
+        "id": "sticky_piston_arm_collision",
         "states": [
             {
                 "name": "facing_direction",
@@ -13754,11 +13812,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -13827,11 +13885,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
@@ -18167,7 +18225,7 @@
                     }
                 ],
                 "default": 0,
-                "bit": 0
+                "bit": 63
             }
         ]
     },
@@ -19613,7 +19671,7 @@
                     }
                 ],
                 "default": 0,
-                "bit": 0
+                "bit": 63
             }
         ]
     },
@@ -20362,11 +20420,11 @@
                 "value": [
                     {
                         "state": false,
-                        "data": 0
+                        "data": -1
                     },
                     {
                         "state": true,
-                        "data": 0
+                        "data": -1
                     }
                 ],
                 "default": false,
