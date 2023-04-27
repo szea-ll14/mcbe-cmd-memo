@@ -159,7 +159,7 @@
 
 ---
 ## 雑な説明
-ターゲットセレクター引数`family`の値に使用する。コマンドで乗せることができるエンティティの組み合わせは決まっている。  
+ターゲットセレクター引数`family`の値に使用する。  
 例えば、`@e[family=fish]`はタラ、サケ、フグ、熱帯魚が選ばれる。  
 
 `behaviour_pack/entities/<entity>.json`内に`minecraft:entity.component_groups.<group>.minecraft:type_family.family`あるいは`minecraft:entity.components.minecraft:type_family.family`に所属するエンティティファミリーが書かれている。  

@@ -1,6 +1,6 @@
 # /help で表示されるコマンド構文一覧
 
-## Rel 1.19.70, オペレーター, チートオン
+## Rel 1.19.80, オペレーター, チートオン
 ```
 /? <page: int>
 /? [command: CommandName]
@@ -10,7 +10,7 @@
 /clear [player: target] [itemName: Item] [data: int] [maxCount: int]
 /clearspawnpoint [player: target]
 /clone <begin: x y z> <end: x y z> <destination: x y z> [maskMode: MaskMode] [cloneMode: CloneMode]
-/clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> <blockStates: block states>
+/clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> [blockStates: block states]
 /connect <serverUri: text>
 /damage <target: target> <amount: int> <cause: DamageCause> entity <damager: target>
 /damage <target: target> <amount: int> [cause: DamageCause]
@@ -43,8 +43,10 @@
 /execute rotated <yaw: value> <pitch: value> <chainedCommand: ExecuteChainedOption_0>
 /execute rotated as <origin: target> <chainedCommand: ExecuteChainedOption_0>
 /execute run <command: command>
+/fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> [oldBlockHandling: FillMode]
 /fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> replace [replaceTileName: Block] [replaceBlockStates: block state]
-/fill <from: x y z> <to: x y z> <tileName: Block> [blockStates: block states] [oldBlockHandling: FillMode]
+/fill <from: x y z> <to: x y z> <tileName: Block> [oldBlockHandling: FillMode]
+/fill <from: x y z> <to: x y z> <tileName: Block> replace [replaceTileName: Block] [replaceBlockStates: block state]
 /fog <victim: target> <mode: delete> <userProvideId: string>
 /fog <victim: target> push <fogId: string> <userProvideId: string>
 /function <name: filepath>
@@ -59,11 +61,15 @@
 /gametest run <testName: string> <stopOnFailure: Boolean> <repeatCount: int> [rotationSteps: int]
 /gametest run <testName: string> [rotationSteps: int]
 /gametest runset [tag: string] [rotationSteps: int]
+/gametest runsetuntilfail [tag: string] [rotationSteps: int]
 /gametest runthese
 /gametest runthis
+/gametest stopall
 /give <player: target> <itemName: Item> [amount: int] [data: int] [components: json]
 /help <page: int>
 /help [command: CommandName]
+/inputpermission query <targets: target> <permission: permission> [state: state]
+/inputpermission set <targets: target> <permission: permission> <state: state>
 /kick <name: target> <reason: massage>
 /kill [target: target]
 /list
@@ -126,6 +132,7 @@
 /script profiler stop
 /script watchdog exportstats
 /setblock <position: x y z> <tileName: Block> [blockStates: block states] [replace|destroy|keep]
+/setblock <position: x y z> <tileName: Block> [replace|destroy|keep]
 /setmaxplayers <maxPlayers: int>
 /setworldspawn [spawnPoint: x y z]
 /spawnpoint [player: target] [spawnPos: x y z]
@@ -138,6 +145,8 @@
 /structure save <name: string> <from: x y z> <to: x y z> [savemode: StructureSaveMode]
 /summon <entityType: EntityType> <nameTag: string> [spawnPos: x y z]
 /summon <entityType: EntityType> [spawnPos: x y z] [yRot: float] [xRot: float] [spawnEvent: string] [nameTag: string]
+/summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtEntity: target> [spawnEvent: string] [nameTag: string]
+/summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtPosition: x y z> [spawnEvent: string] [nameTag: string]
 /tag <entity: target> <add|remove> <name: string>
 /tag <entity: target> list
 /teleport <destination: target> [checkForBlocks: Boolean]
@@ -201,6 +210,10 @@
 /volumearea remove <position: x y z>
 /volumearea remove_all
 ```
+### Beta API (ベータ API) オン
+```
+/scriptevent <messageId: string> <message: message>
+```
 ### Education Edition オン
 ```
 /ability <player: target> <ability: Ability> <value: Boolean>
@@ -221,43 +234,47 @@
 /stop
 /whitelist <action: AllowListAction> [name: string]
 ```
-## Pre 1.19.80.21
+## Pre 1.20.0.22
 ```
-/clone <begin: x y z> <end: x y z> <destination: x y z> filtered <cloneMode: CloneMode> <tileName: Block> [blockStates: block states]
-/fill <from: x y z> <to: x y z> <tileName: Block> <blockStates: block states> replace <replaceTileName: Block> [replaceBlockStates: block state]
-/fill <from: x y z> <to: x y z> <tileName: Block> [oldBlockHandling: FillMode]
-/fill <from: x y z> <to: x y z> <tileName: Block> replace [replaceTileName: Block] [replaceBlockStates: block state]
-/inputpermission query <targets: target> <permission: permission> [state: state]
-/inputpermission set <targets: target> <permission: permission> <state: state>
-/setblock <position: x y z> <tileName: Block> [replace|destroy|keep]
-/summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtEntity: target> [spawnEvent: string] [nameTag: string]
-/summon <entityType: EntityType> [spawnPos: x y z] facing <lookAtPosition: x y z> [spawnEvent: string] [nameTag: string]
+/camera <players: target> clear
+/camera <players: target> fade
+/camera <players: target> fade color <red: float> <green: float> <blue: float>
+/camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float>
+/camera <players: target> fade time <fadeInSeconds: float> <holdSeconds: float> <fadeOutSeconds: float> color <red: float> <green: float> <blue: float>
+/camera <players: target> set <preset: string> [default: default]
+/camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> [default: default]
+/camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z>
+/camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> pos <position: x y z> rot <xRot: value> <yRot: value>
+/camera <players: target> set <preset: string> ease <easeTime: float> <easeType: Easing> rot <xRot: value> <yRot: value>
+/camera <players: target> set <preset: string> pos <position: x y z>
+/camera <players: target> set <preset: string> pos <position: x y z> rot <xRot: value> <yRot: value>
+/camera <players: target> set <preset: string> rot <xRot: value> <yRot: value>
 ```
 ## 隠しコマンド
-Fandom Wikiより
-いくつかはBDSで実行可能
-情報求
+Fandom Wikiより  
+いくつかはBDSで実行可能  
+<!-- 情報求 -->
 ```
-/agent attack <direction>
-/agent collect <string:item>
+/agent attack <direction: direction>
+/agent collect <item: string>
 /agent create
-/agent destroy <direction>
-/agent detect <direction>
-/agent detectredstone <direction>
-/agent drop <int:slotNum> <int:quantity> <direction>
-/agent dropall <direction>
-/agent getitemcount <int:slotNum>
-/agent getitemspace <int:slotNum>
-/agent getitemdetail <int:slotNum>
-/agent inspect <direction>
-/agent inspectdata <direction>
-/agent move <direction>
-/agent place <int:slotNum> <direction>
-/agent setitem <int:slotNum> <int:quantity> <int:amount> <int:data>
-/agent tp <coordinates>
-/agent transfer <int:srcSlotNum> <int:quantity> <int:dstSlotNum>
-/agent turn <turnDirection>
-/agent till <direction>
+/agent destroy <direction: direction>
+/agent detect <direction: direction>
+/agent detectredstone <direction: direction>
+/agent drop <slotNum: int> <quantity: int> <direction: direction>
+/agent dropall <direction: direction>
+/agent getitemcount <slotNum: int>
+/agent getitemspace <slotNum: int>
+/agent getitemdetail <slotNum: int>
+/agent inspect <direction: direction>
+/agent inspectdata <direction: direction>
+/agent move <direction: direction>
+/agent place <slotNum: int> <direction: direction>
+/agent setitem <slotNum: int> <quantity: int> <amount: int> <data: int>
+/agent tp <coordinates: x y z>
+/agent transfer <srcSlotNum: int> <quantity: int> <dstSlotNum: int>
+/agent turn <turnDirection: turnDirection>
+/agent till <direction: direction>
 /closewebsocket
 /dedicatedwsserver ???
 /enableencryption <Public Key> <Salt value>
@@ -268,7 +285,7 @@ Fandom Wikiより
 /getspawnpoint <player: target>
 /gettopsolidblock ???
 /globalpause ???
-/listd ???
+/listd
 /querytarget <target: target>
 /replace ???
 /takepicture <targetCamera: target> <targetPlayer: target>
@@ -279,7 +296,7 @@ Fandom Wikiより
 
 
 ## おまけ: エイリアス
-「'<コマンド名>' を <実行者名> として実行できませんでした」の<コマンド名>はエイリアス元のコマンドが表示される。`/execute run`か、旧executeのdetectが失敗する(エラーではない)と出る。
+「'<コマンド名>' を <実行者名> として実行できませんでした」の<コマンド名>はエイリアス元のコマンドが表示される。`/execute run`か、旧executeのdetectが失敗したとき(構文エラーではない)に出る。
 
 エイリアス元 ← エイリアス  
 help ← ?  

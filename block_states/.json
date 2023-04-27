@@ -747,7 +747,7 @@
                         "data": 8
                     }
                 ],
-                "default": false,
+                "default": true,
                 "bit": 8
             }
         ]
@@ -832,22 +832,6 @@
                     {
                         "state": 5,
                         "data": 5
-                    },
-                    {
-                        "state": 6,
-                        "data": -1
-                    },
-                    {
-                        "state": 7,
-                        "data": -1
-                    },
-                    {
-                        "state": 8,
-                        "data": -1
-                    },
-                    {
-                        "state": 9,
-                        "data": -1
                     }
                 ],
                 "default": 0,
@@ -7295,7 +7279,7 @@
                         "data": -1
                     }
                 ],
-                "default": 5,
+                "default": 0,
                 "bit": 3
             },
             {
@@ -16373,7 +16357,7 @@
                         "data": -1
                     }
                 ],
-                "default": 5,
+                "default": 0,
                 "bit": 0
             },
             {
