@@ -52,16 +52,3 @@
 |zombie_pigman|minecraft:pig_zombie_adult|zombie|
 |zombie_villager|adult|zombie|
 |zombie_villager_v2|adult|zombie|
-
----
-## 雑な説明
-下のエンティティ(乗られる方)をride、上のエンティティ(乗る方)をriderとする。  
-`/ride`コマンドで乗せることができるエンティティの組み合わせは決まっている。  
-rideのエンティティID・コンポーネントグループとriderのエンティティファミリーとの組み合わせが合えば使える。  
-rideコンポーネントグループが空欄の場合、コンポーネントグループの制限がない。  
-
-`behaviour_pack/entities/<rideentity>.json`内に`minecraft:entity.component_groups.<ridegroup>.minecraft:rideable`あるいは`minecraft:entity.components.minecraft:rideable`があればその上にエンティティを乗せることができる。  
-前者は、rideがコンポーネントグループ`<ridegroup>`を持っているときのみ。  
-後者は、コンポーネントグループに関係なくいつでも。  
-`minecraft:rideable.family_types`があれば、riderのエンティティファミリーを制限する。  
-なお、`<rideentity>`, `<ridegroup>`は任意の文字列。  

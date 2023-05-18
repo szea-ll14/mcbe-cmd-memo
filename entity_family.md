@@ -156,13 +156,3 @@
 |zombie_villager_v2|butcher|butcher, zombie_villager, zombie, undead, monster, mob|
 |zombie_villager_v2|leatherworker|leatherworker, zombie_villager, zombie, undead, monster, mob|
 |zombie_villager_v2|mason|stone_mason, zombie_villager, zombie, undead, monster, mob|
-
----
-## 雑な説明
-ターゲットセレクター引数`family`の値に使用する。  
-例えば、`@e[family=fish]`はタラ、サケ、フグ、熱帯魚が選ばれる。  
-
-`behaviour_pack/entities/<entity>.json`内に`minecraft:entity.component_groups.<group>.minecraft:type_family.family`あるいは`minecraft:entity.components.minecraft:type_family.family`に所属するエンティティファミリーが書かれている。  
-前者は、コンポーネントグループ`<ridegroup>`を持っているときのみ。  
-後者は、コンポーネントグループに関係なくいつでも。    
-なお、`<entity>`, `<group>`は任意の文字列。  
