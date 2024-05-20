@@ -1,10 +1,5 @@
-# mcbe-cmd-note
-Minecraft Bedrock Edition バニラ環境でのコマンドに関するメモ等。  
-Minecraft for Windowsでの確認。  
-雑に書いて雑に置いているので見づらかったらごめんね。
-
-## help_cmd.md
-`/help`コマンドで表示されるやつ一覧。
+# mcbe-cmd-memo
+Minecraft Bedrock Editionでのコマンドに関するメモ等を[Code](../../)や[Discussions](../../discussions)に記録しています。Minecraft for Windows上での確認です。  
 
 ## entity_family.md
 タゲセレ引数`family`の値一覧。
