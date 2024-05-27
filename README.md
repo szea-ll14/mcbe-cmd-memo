@@ -1,2 +1,2 @@
 # mcbe-cmd-memo
-Minecraft Bedrock Editionでのコマンドに関するメモ等を[Discussions](../../discussions)や[Code](../../)に記録しています。Minecraft for Windows上での確認です。
+Minecraft Bedrock版でのコマンドに関するメモなどを[Discussions](../../discussions)や[Code](../../)に記録しています。Minecraft for Windows上での確認です。
